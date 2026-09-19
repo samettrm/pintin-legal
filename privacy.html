@@ -33,177 +33,198 @@
 <body>
 
 <h1>PinTin — Gizlilik Politikası</h1>
-<p class="meta">Yürürlük tarihi: 15 Ağustos 2026 · Sürüm 1.0</p>
+<p class="meta">Yürürlük tarihi: 19 Eylül 2026 · Sürüm 1.1</p>
 
-<p><strong>Özet: PinTin verilerinizi toplamaz.</strong> Uygulamanın hesap sistemi,
-sunucusu ve ağ katmanı yoktur. Girdiğiniz her şey yalnızca kendi cihazınızda kalır.</p>
+<p><strong>Özet:</strong> Sağlık ve gebelik kayıtlarınız yalnızca cihazınızda kalır; sunucumuza
+gönderilmez. Giriş yapmak <strong>isteğe bağlıdır</strong>. Giriş yaparsanız sunucumuzda yalnızca
+bir <strong>hesap kimliği</strong> tutulur — e-posta, ad, telefon veya sağlık verisi tutulmaz.
+Reklam ve izleme yoktur.</p>
 
 <h2>1. Kim olduğumuz</h2>
 <p>PinTin, BUSATER tarafından geliştirilen bir gebelik ve bebek takip uygulamasıdır.
 Bu politika PinTin mobil uygulamasını kapsar.</p>
 
-<h2>2. Hangi verileri topluyoruz</h2>
-<p><strong>Hiçbirini.</strong> PinTin sizden hiçbir veri toplamaz, sunucuya göndermez ve
-üçüncü taraflarla paylaşmaz.</p>
-<p>Uygulamada girdiğiniz aşağıdaki bilgiler <strong>yalnızca cihazınızın kendi
-depolama alanına</strong> yazılır ve cihazdan hiç çıkmaz:</p>
+<h2>2. Cihazınızda kalan — toplanmayan — kayıtlar</h2>
+<p>Uygulamada girdiğiniz aşağıdaki bilgiler <strong>yalnızca cihazınızın kendi depolama
+alanına</strong> yazılır, cihazdan hiç çıkmaz ve sunucumuza <strong>gönderilmez</strong>:</p>
 <ul>
   <li>gebelik tarihleri ve hesaplama yöntemi</li>
   <li>ruh hâli (mood) ve enerji kayıtları</li>
   <li>semptom kayıtları</li>
-  <li>tekme sayacı oturumları</li>
-  <li>kasılma sayacı oturumları</li>
+  <li>tekme sayacı ve kasılma sayacı oturumları</li>
   <li>bebeğe verdiğiniz takma ad</li>
-  <li>adet başlangıcı ve bitişi kayıtları (Planlama kipi)</li>
-  <li>akış yoğunluğu kayıtları</li>
+  <li>adet başlangıcı/bitişi ve akış yoğunluğu kayıtları (Planlama kipi)</li>
   <li>bazal vücut sıcaklığı ölçümleri</li>
   <li>yumurtlama (LH) ve gebelik testi sonuçları — yalnız sizin girdiğiniz sonuç</li>
-  <li>servikal mukus gözlemleri</li>
-  <li>güne bağlı semptom ve not kayıtları</li>
+  <li>servikal mukus gözlemleri; güne bağlı semptom ve notlar</li>
+  <li>bebek profili: ad, doğum tarihi, cinsiyet, doğum kilosu ve boyu</li>
+  <li>beslenme, uyku, bez ve büyüme kayıtları; yazdığınız anılar</li>
+  <li>dil, tema, birim ve takip rehberi tercihleri</li>
 </ul>
+<p>Bu kayıtlar cihazın uygulama içi deposunda (AsyncStorage) tutulur ve yalnızca PinTin
+tarafından okunur. Sağlık verisi hiçbir koşulda sunucumuzda toplanmaz.</p>
 <h3>Apple Health</h3>
 <p>Apple Health bağlantısı <strong>isteğe bağlıdır ve varsayılan olarak kapalıdır</strong>. Siz
 Döngüm ekranından açmadıkça PinTin sağlık izni istemez, Apple Health’ten veri okumaz ve
 oraya veri yazmaz. Bağlantıyı açtığınızda yalnız şu türler alışverişe girer: adet ve akış,
 bazal vücut sıcaklığı, servikal mukus, yumurtlama (LH) testi, gebelik testi. Notlarınız,
-PMS kayıtlarınız ve PinTin’in kendi semptom listesi Apple Health’e <strong>hiç
-yazılmaz</strong>. PinTin’de bir kaydı silmeniz onu Apple Health’ten silmez. Apple Health’ten
-gelen veri reklam, analitik ya da yapay zekâ amacıyla kullanılmaz.</p>
+PMS kayıtlarınız ve PinTin’in kendi semptom listesi Apple Health’e <strong>hiç yazılmaz</strong>.
+Apple Health verisi reklam, analitik ya da yapay zekâ amacıyla kullanılmaz.</p>
+
+<h2>3. Hesap ve kimlik (isteğe bağlı giriş)</h2>
+<p>PinTin’i <strong>giriş yapmadan misafir olarak</strong> kullanabilirsiniz. İsterseniz
+<strong>Apple ile</strong> veya <strong>Google ile</strong> giriş yapabilirsiniz. Giriş yalnızca
+kimliğinizi doğrulamak içindir.</p>
+<p>Giriş yaptığınızda kimlik sunucumuzda <strong>yalnızca şunlar</strong> saklanır:</p>
 <ul>
-  <li>bebek profili: ad, doğum tarihi, cinsiyet, doğum kilosu ve boyu</li>
-  <li>beslenme, uyku ve bez kayıtları</li>
-  <li>bebek büyüme ölçümleri ve yazdığınız anılar</li>
-  <li>dil, tema, birim ve takip rehberi tercihleri</li>
+  <li>uygulamanın ürettiği rastgele bir <strong>hesap kimliği</strong> (UUID);</li>
+  <li><strong>hangi sağlayıcıyla</strong> giriş yaptığınız (Apple veya Google);</li>
+  <li>sağlayıcının verdiği <strong>konu kimliği</strong> (provider “sub”) — sizi yalnız o
+      sağlayıcıya karşı tanımlayan teknik bir dizedir;</li>
+  <li>oturum bilgisi: yenileme jetonunun <strong>özeti (hash)</strong>, cihaz etiketi ve
+      zaman damgaları;</li>
+  <li>yalnızca teknik bir denetim kütüğü: olay adı, hesap kimliği ve kısa bir teknik sebep.</li>
 </ul>
-<p>Bu kayıtlar cihazın uygulama içi deposunda (AsyncStorage) tutulur ve yalnızca PinTin
-tarafından okunur.</p>
+<p><strong>Saklanmayanlar:</strong> e-posta adresiniz, adınız, telefon numaranız ve her türlü
+sağlık/gebelik verisi. Apple’ın gizli e-posta yönlendirme adresi dâhil e-posta hiçbir yerde
+tutulmaz. Kimlik verileri aktarım sırasında <strong>şifrelenir (HTTPS)</strong>.</p>
 
-<h2>3. Hesap ve kimlik</h2>
-<p>PinTin hesabı yoktur. Kayıt olmanız, giriş yapmanız, e-posta veya telefon numarası
-vermeniz gerekmez. Sizi tanımlayan bir kimlik oluşturulmaz.</p>
-
-<h2>4. Reklam, izleme ve analitik</h2>
-<p>PinTin hiçbir reklam ağı, analitik aracı veya izleme yazılım geliştirme kiti (SDK)
-içermez. Uygulama, iOS’taki izleme izni penceresini (App Tracking Transparency)
-<strong>hiç göstermez</strong>, çünkü izlemeye ihtiyaç duymaz.</p>
+<h2>4. Paylaşım, reklam, izleme ve analitik</h2>
+<p>Hesap kimliğiniz <strong>üçüncü taraflarla paylaşılmaz</strong> ve <strong>izleme için
+kullanılmaz</strong>. PinTin hiçbir reklam ağı, analitik aracı veya izleme SDK’sı içermez ve
+iOS’taki İzleme İzni (App Tracking Transparency) penceresini <strong>hiç göstermez</strong>.</p>
 
 <h2>5. İzinler</h2>
-<p>PinTin çalışma zamanında hiçbir izin istemez: konum, kamera, fotoğraflar, hareket,
-sağlık verisi ve bildirim izinleri talep edilmez.</p>
+<p>PinTin çalışma zamanında konum, kamera, fotoğraf, hareket, sağlık ya da bildirim izni
+istemez. “Apple ile giriş” ve “Google ile giriş”, işletim sisteminin kendi güvenli giriş
+ekranıyla yürütülür; parolanızı PinTin görmez.</p>
 
 <h2>6. Çocukların verileri</h2>
-<p>PinTin çocuklara yönelik değildir ve hiç kimseden veri toplamadığı için çocuklara ait
-veri de toplamaz.</p>
+<p>PinTin çocuklara yönelik değildir.</p>
 
 <h2>7. Verileriniz üzerindeki denetiminiz</h2>
-<p>Uygulama içinde <em>Sen → Verileriniz → Her şeyi sil</em> yolunu izleyerek bütün
-kayıtlarınızı cihazdan kalıcı olarak silebilirsiniz. Bu işlem geri alınamaz ve giriş
+<p><strong>Cihazdaki kayıtlar:</strong> Uygulama içinde <em>Sen → Verileriniz → Her şeyi sil</em>
+yolunu izleyerek bütün yerel kayıtlarınızı kalıcı olarak silebilirsiniz. Bu işlem giriş
 yapmayı gerektirmez.</p>
-<p>Uygulamayı cihazınızdan kaldırmanız da tüm yerel verilerin silinmesini sağlar.</p>
+<p><strong>Hesap:</strong> Giriş yaptıysanız <em>Sen → Hesap → Hesabımı sil</em> ile hesabınızı
+silebilirsiniz. Nasıl çalıştığı ve neyin kaldığı ayrı sayfada açıklanır:
+<a href="delete-account.html">Hesabımı sil</a>.</p>
+<p>Uygulamayı cihazınızdan kaldırmanız da tüm yerel verilerin silinmesini sağlar (sunucudaki
+hesabı silmez — bunun için önce hesap silmeyi kullanın).</p>
 
-<h2>8. Veri aktarımı ve saklama süresi</h2>
-<p>Veri hiçbir ülkeye aktarılmaz, çünkü cihazınızdan hiç çıkmaz. Saklama süresini
-tamamen siz belirlersiniz: veriler siz silene ya da uygulamayı kaldırana kadar
-cihazınızda durur.</p>
+<h2>8. Aktarım ve saklama</h2>
+<p>Sağlık ve gebelik verileriniz hiçbir ülkeye aktarılmaz, çünkü cihazınızdan çıkmaz. Giriş
+yaptıysanız hesap kimliğiniz, kimlik sunucumuz siz silene kadar tutulur; sildiğinizde
+kalıcı olarak yok edilir (bkz. <a href="delete-account.html">Hesabımı sil</a>).</p>
 
 <h2>9. Sağlık bilgisi hakkında</h2>
-<p>PinTin bir tıbbi cihaz veya tanı aracı değildir. Uygulamadaki değerlendirmeler ve
-sayılar bilgilendirme amaçlıdır; doktorunuzun görüşünün yerine geçmez. Kaynakların
-tamamı uygulama içindeki <em>Kaynaklar ve metodoloji</em> ekranında listelenir.</p>
+<p>PinTin bir tıbbi cihaz veya tanı aracı değildir. Uygulamadaki değerlendirmeler ve sayılar
+bilgilendirme amaçlıdır; doktorunuzun görüşünün yerine geçmez. Kaynakların tamamı uygulama
+içindeki <em>Kaynaklar ve metodoloji</em> ekranında listelenir.</p>
 
 <h2>10. Bu politikadaki değişiklikler</h2>
-<p>Politika değişirse bu sayfa güncellenir ve yürürlük tarihi değiştirilir. Veri toplama
+<p>Politika değişirse bu sayfa güncellenir ve yürürlük tarihi değiştirilir. Veri işleme
 davranışımızı değiştiren bir değişiklik olursa uygulama içinde ayrıca bildirilir.</p>
 
 <h2>11. İletişim</h2>
-<p>Sorularınız için: <a href="mailto:bsdigitalapp@gmail.com">bsdigitalapp@gmail.com</a></p>
+<p>Sorularınız için: <a href="mailto:bsdigitalapp+pintin@gmail.com">bsdigitalapp+pintin@gmail.com</a></p>
 
 <hr>
 
 <h1 id="en">PinTin — Privacy Policy</h1>
-<p class="meta">Effective date: 15 August 2026 · Version 1.0</p>
+<p class="meta">Effective date: 19 September 2026 · Version 1.1</p>
 
-<p><strong>Summary: PinTin does not collect your data.</strong> The app has no account
-system, no server and no network layer. Everything you enter stays on your own device.</p>
+<p><strong>Summary:</strong> Your health and pregnancy records stay only on your device; they are
+not sent to our server. Signing in is <strong>optional</strong>. If you sign in, our server holds
+only an <strong>account identifier</strong> — no email, name, phone number or health data. There
+is no advertising and no tracking.</p>
 
 <h2>1. Who we are</h2>
-<p>PinTin is a pregnancy and baby tracking app developed by BUSATER. This policy covers
-the PinTin mobile application.</p>
+<p>PinTin is a pregnancy and baby tracking app developed by BUSATER. This policy covers the
+PinTin mobile application.</p>
 
-<h2>2. What data we collect</h2>
-<p><strong>None.</strong> PinTin collects no data from you, transmits nothing to a server
-and shares nothing with third parties.</p>
-<p>The information you enter is written <strong>only to your device’s own storage</strong>
-and never leaves it:</p>
+<h2>2. Records that stay on your device — not collected</h2>
+<p>The information you enter is written <strong>only to your device’s own storage</strong>, never
+leaves it and is <strong>not sent</strong> to our server:</p>
 <ul>
   <li>pregnancy dates and dating method</li>
-  <li>mood and energy entries</li>
-  <li>symptom entries</li>
-  <li>kick counter sessions</li>
-  <li>contraction timer sessions</li>
+  <li>mood and energy entries; symptom entries</li>
+  <li>kick counter and contraction timer sessions</li>
   <li>the nickname you give your baby</li>
-  <li>period start and end dates (Planning mode)</li>
-  <li>flow intensity entries</li>
+  <li>period start/end and flow intensity entries (Planning mode)</li>
   <li>basal body temperature readings</li>
   <li>ovulation (LH) and pregnancy test results — only the result you entered</li>
-  <li>cervical mucus observations</li>
-  <li>per-day symptom and note entries</li>
-</ul>
-<h3>Apple Health</h3>
-<p>The Apple Health connection is <strong>optional and off by default</strong>. Unless you turn
-it on from the Cycle screen, PinTin does not ask for health permission, does not read from
-Apple Health and does not write to it. When it is on, only these types are exchanged: period
-and flow, basal body temperature, cervical mucus, ovulation (LH) test, pregnancy test. Your
-notes, PMS entries and PinTin’s own symptom list are <strong>never written</strong> to Apple
-Health. Deleting an entry in PinTin does not delete it from Apple Health. Data from Apple
-Health is never used for advertising, analytics or AI.</p>
-<ul>
+  <li>cervical mucus observations; per-day symptoms and notes</li>
   <li>baby profile: name, date of birth, sex, birth weight and length</li>
-  <li>feeding, sleep and diaper entries</li>
-  <li>baby growth measurements and the memories you write</li>
+  <li>feeding, sleep, diaper and growth entries; the memories you write</li>
   <li>language, appearance, units and care-guidance preferences</li>
 </ul>
-<p>These records are held in the app's own on-device storage (AsyncStorage) and are read
-only by PinTin.</p>
+<p>These records are held in the app’s own on-device storage (AsyncStorage) and are read only by
+PinTin. Health data is never collected on our server.</p>
+<h3>Apple Health</h3>
+<p>The Apple Health connection is <strong>optional and off by default</strong>. Unless you turn it
+on from the Cycle screen, PinTin does not ask for health permission, does not read from Apple
+Health and does not write to it. When on, only these types are exchanged: period and flow, basal
+body temperature, cervical mucus, ovulation (LH) test, pregnancy test. Your notes, PMS entries and
+PinTin’s own symptom list are <strong>never written</strong> to Apple Health. Apple Health data is
+never used for advertising, analytics or AI.</p>
 
-<h2>3. Accounts and identity</h2>
-<p>There is no PinTin account. You do not register, sign in, or provide an email address
-or phone number. No identifier is created for you.</p>
+<h2>3. Accounts and identity (optional sign-in)</h2>
+<p>You can use PinTin <strong>as a guest, without signing in</strong>. If you wish, you may sign in
+<strong>with Apple</strong> or <strong>with Google</strong>. Sign-in is only to verify your
+identity.</p>
+<p>When you sign in, our identity server stores <strong>only</strong>:</p>
+<ul>
+  <li>a random <strong>account identifier</strong> (UUID) generated by the app;</li>
+  <li>which <strong>provider</strong> you used (Apple or Google);</li>
+  <li>the provider’s <strong>subject identifier</strong> (“sub”) — a technical string that
+      identifies you only to that provider;</li>
+  <li>session data: a <strong>hash</strong> of the refresh token, a device label and timestamps;</li>
+  <li>a minimal technical audit log: event name, account identifier and a short technical reason.</li>
+</ul>
+<p><strong>Not stored:</strong> your email address, name, phone number, or any health/pregnancy
+data. No email is kept anywhere, including Apple’s private relay address. Identity data is
+<strong>encrypted in transit (HTTPS)</strong>.</p>
 
-<h2>4. Advertising, tracking and analytics</h2>
-<p>PinTin contains no advertising network, no analytics tool and no tracking SDK. The app
-<strong>never</strong> displays the iOS App Tracking Transparency prompt, because it has
-no need to track anything.</p>
+<h2>4. Sharing, advertising, tracking and analytics</h2>
+<p>Your account identifier is <strong>not shared with third parties</strong> and is <strong>not
+used for tracking</strong>. PinTin contains no advertising network, no analytics tool and no
+tracking SDK, and <strong>never</strong> shows the iOS App Tracking Transparency prompt.</p>
 
 <h2>5. Permissions</h2>
-<p>PinTin requests no runtime permissions: no location, camera, photos, motion, health
-data or notification permissions are requested.</p>
+<p>PinTin requests no location, camera, photos, motion, health or notification permissions at
+runtime. “Sign in with Apple” and “Sign in with Google” run through the operating system’s own
+secure sign-in sheet; PinTin never sees your password.</p>
 
 <h2>6. Children’s data</h2>
-<p>PinTin is not directed at children, and because it collects no data from anyone, it
-collects no data about children either.</p>
+<p>PinTin is not directed at children.</p>
 
 <h2>7. Your control over your data</h2>
-<p>Inside the app, go to <em>You → Your data → Delete everything</em> to permanently
-remove all of your entries from the device. This cannot be undone and does not require
-signing in.</p>
-<p>Deleting the app from your device also removes all local data.</p>
+<p><strong>On-device records:</strong> inside the app, go to <em>You → Your data → Delete
+everything</em> to permanently remove all local records. This does not require signing in.</p>
+<p><strong>Account:</strong> if you signed in, use <em>You → Account → Delete my account</em>.
+How it works and what remains is explained on a separate page:
+<a href="delete-account.html">Delete my account</a>.</p>
+<p>Deleting the app from your device also removes all local data (it does not delete a server
+account — use account deletion first for that).</p>
 
 <h2>8. Transfers and retention</h2>
-<p>No data is transferred to any country, because it never leaves your device. You decide
-the retention period: data stays on your device until you delete it or remove the app.</p>
+<p>Your health and pregnancy data is not transferred to any country, because it never leaves your
+device. If you signed in, your account identifier is kept by our identity server until you delete
+it, at which point it is permanently destroyed (see <a href="delete-account.html">Delete my
+account</a>).</p>
 
 <h2>9. About health information</h2>
-<p>PinTin is not a medical device or a diagnostic tool. The figures and information in the
-app are for general information and do not replace your clinician. Every source is listed
-in the app’s <em>Sources and methodology</em> screen.</p>
+<p>PinTin is not a medical device or a diagnostic tool. The figures and information in the app are
+for general information and do not replace your clinician. Every source is listed in the app’s
+<em>Sources and methodology</em> screen.</p>
 
 <h2>10. Changes to this policy</h2>
-<p>If this policy changes, this page is updated and the effective date is revised. Any
-change that affects our data practices is also announced inside the app.</p>
+<p>If this policy changes, this page is updated and the effective date is revised. Any change that
+affects our data practices is also announced inside the app.</p>
 
 <h2>11. Contact</h2>
-<p>Questions: <a href="mailto:bsdigitalapp@gmail.com">bsdigitalapp@gmail.com</a></p>
+<p>Questions: <a href="mailto:bsdigitalapp+pintin@gmail.com">bsdigitalapp+pintin@gmail.com</a></p>
 
 </body>
 </html>

@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PinTin — Hesabımı sil / Delete my account</title>
+<meta name="robots" content="index, follow">
+<style>
+  :root { color-scheme: light dark; }
+  body {
+    margin: 0 auto; padding: 32px 20px 64px; max-width: 46rem;
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #202128; background: #FFF8F4;
+  }
+  h1 { font-size: 1.7rem; line-height: 1.25; margin: 0 0 4px; }
+  h2 { font-size: 1.25rem; margin: 40px 0 8px; }
+  .meta { color: #6B6D77; font-size: .9rem; margin: 0 0 32px; }
+  hr { border: 0; border-top: 1px solid #E3D2C7; margin: 48px 0; }
+  ol, ul { padding-left: 1.2rem; }
+  li { margin: 6px 0; }
+  a { color: #C0372F; }
+  @media (prefers-color-scheme: dark) {
+    body { color: #F5F2F0; background: #111218; }
+    .meta { color: #A2A4AE; }
+    hr { border-top-color: #3A3E4C; }
+    a { color: #FF8B82; }
+  }
+</style>
+</head>
+<body>
+
+<h1>PinTin — Hesabımı sil</h1>
+<p class="meta">Geliştirici: BUSATER · Uygulama: PinTin (com.busater.pintin) · Güncelleme: 19 Eylül 2026</p>
+
+<p>PinTin’i giriş yapmadan (misafir) kullanabilirsiniz. Yalnızca <strong>Apple ile</strong> veya
+<strong>Google ile</strong> giriş yaptıysanız bir hesabınız olur. Hesabınızı doğrudan uygulamadan
+silebilirsiniz.</p>
+
+<h2>Uygulama içinden nasıl silinir</h2>
+<ol>
+  <li>PinTin’i açın.</li>
+  <li><strong>Sen</strong> sekmesine gidin.</li>
+  <li><strong>Hesap</strong> bölümünde <strong>Hesabımı sil</strong>’e dokunun.</li>
+  <li>Onaylayın. İşlem geri alınamaz.</li>
+</ol>
+
+<h2>Silindiğinde sunucuda ne olur</h2>
+<p>Hesabınız silindiğinde kimlik sunucumuzda kalıcı olarak yok edilenler:</p>
+<ul>
+  <li>hesap kaydınız (rastgele hesap kimliğiniz),</li>
+  <li>giriş kimliğiniz (Apple/Google bağlantısı ve sağlayıcı “sub” değeri),</li>
+  <li>tüm oturumlarınız (yenileme jetonu özetleri).</li>
+</ul>
+<p>Bu gerçek bir silmedir; yumuşak silme (pasife alma) değildir.</p>
+
+<h2>Geride yalnızca ne kalır</h2>
+<p>Silme sonrası tek tutulan kayıt, rastgele hesap kimliğinizin <strong>tek yönlü bir
+özetidir (SHA-256)</strong>; bir silme denetim kaydıdır. Bu özet <strong>geri çevrilemez</strong>
+ve sizi tanımlamaz. Zaten hiçbir zaman saklanmayan e-posta, ad, telefon ve sağlık verisi için
+silinecek bir şey yoktur.</p>
+
+<h2>Cihazınızdaki kayıtlar (önemli)</h2>
+<p>Gebelik, semptom, kilo, bebek, randevu ve günlük gibi kayıtlarınız <strong>yalnızca
+cihazınızda</strong> durur ve sunucuya hiç gönderilmez. Hesabı silmek bu yerel kayıtları
+<strong>otomatik silmez</strong>. Yerel kayıtları da silmek isterseniz:</p>
+<ul>
+  <li>hesap silme ekranında <strong>“Bu cihazdaki PinTin verilerini de sil”</strong> kutusunu
+      işaretleyin; ya da</li>
+  <li><strong>Sen → Verileriniz → Her şeyi sil</strong> yolunu kullanın.</li>
+</ul>
+
+<h2>Uygulamayı açamıyorsanız</h2>
+<p>Cihaz erişiminiz yoksa <a href="mailto:bsdigitalapp+pintin@gmail.com">bsdigitalapp+pintin@gmail.com</a>
+adresine yazın; hesabınızı sizin adınıza silelim. Kimliğinizi doğrulamak dışında hassas bilgi
+istemeyiz.</p>
+
+<hr>
+
+<h1 id="en">PinTin — Delete my account</h1>
+<p class="meta">Developer: BUSATER · App: PinTin (com.busater.pintin) · Updated: 19 September 2026</p>
+
+<p>You can use PinTin without signing in (as a guest). You only have an account if you signed in
+<strong>with Apple</strong> or <strong>with Google</strong>. You can delete your account directly
+in the app.</p>
+
+<h2>How to delete in the app</h2>
+<ol>
+  <li>Open PinTin.</li>
+  <li>Go to the <strong>You</strong> tab.</li>
+  <li>Under <strong>Account</strong>, tap <strong>Delete my account</strong>.</li>
+  <li>Confirm. This cannot be undone.</li>
+</ol>
+
+<h2>What is deleted on the server</h2>
+<p>When your account is deleted, the following are permanently destroyed on our identity server:</p>
+<ul>
+  <li>your account record (your random account identifier),</li>
+  <li>your sign-in identity (the Apple/Google link and provider “sub”),</li>
+  <li>all of your sessions (refresh-token hashes).</li>
+</ul>
+<p>This is a real deletion, not a soft delete.</p>
+
+<h2>What is retained</h2>
+<p>The only thing kept after deletion is a <strong>one-way hash (SHA-256)</strong> of your random
+account identifier, as a deletion audit record. This hash is <strong>irreversible</strong> and does
+not identify you. There is nothing to delete for email, name, phone or health data, because those
+are never stored.</p>
+
+<h2>Records on your device (important)</h2>
+<p>Your records — pregnancy, symptoms, weight, baby, appointments, journal — stay <strong>only on
+your device</strong> and are never sent to the server. Deleting your account does <strong>not</strong>
+automatically delete these local records. To also delete local records:</p>
+<ul>
+  <li>tick <strong>“Also delete this device’s PinTin data”</strong> on the account deletion screen; or</li>
+  <li>use <strong>You → Your data → Delete everything</strong>.</li>
+</ul>
+
+<h2>If you cannot open the app</h2>
+<p>If you no longer have the device, email <a href="mailto:bsdigitalapp+pintin@gmail.com">bsdigitalapp+pintin@gmail.com</a>
+and we will delete your account for you. We do not ask for sensitive information beyond verifying
+your identity.</p>
+
+</body>
+</html>
